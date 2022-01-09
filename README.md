@@ -46,6 +46,7 @@ We used F-measure for the performance metric and Train/Test Percentage Split 75%
 
 For the evaluation, we gathered the F-measure value for each model, as well as the number of true positives, true negatives, false positives, and false negatives.
 
+We picked the "best" model for each classifier, and they are the following:
 
 **Model 1** - NaiveBayesMultinomial: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute Selection: CfsSubsetEval.
 
@@ -60,7 +61,7 @@ For the evaluation, we gathered the F-measure value for each model, as well as t
 ##
 
 ### Results from the evaluation
-Comparison flags: v for **significantly better** performance and * for **significantly worse** performance compared to classifier *NaiveBayesMultinomial*.
+Comparison flags: &nbsp; v for **significantly better** performance and * for **significantly worse** performance compared to classifier *NaiveBayesMultinomial*.
 
 ![Table Results](https://user-images.githubusercontent.com/96803412/148700898-f3438345-9aca-4810-9245-0d79c2710c63.png)
 
