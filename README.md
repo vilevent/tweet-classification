@@ -29,6 +29,8 @@ With *AttributeSelectedClassifier* wrapped up inside *FiteredClassifier*, we inv
 - ***StringToWordVector* filter** (e.g., outputWordCounts, lowerCaseTokens, wordsToKeep, Stemmer)
 - **Attribute selection techniques** (e.g., WrapperSubsetEval, CfsSubsetEval, and GainRatioAttributeEval).
 
+We can break up each tweet into tokens by using the *StringToWordVector* filter.
+
 **NaiveBayesMultinomial**, **ZeroR**, **OneR**, **SMO** (i.e., support vector machines), and **RandomForest** were our chosen classifiers inside *AttributeSelectedClassifier*. We had ZeroR and OneR as baselines.
 
 
