@@ -69,7 +69,7 @@ Comparison flags: &nbsp; v for **significantly better** performance and * for **
 
 *The F-measure for ZeroR could not be obtained due to a division by zero error*
 
-![Performance Plot](https://user-images.githubusercontent.com/96803412/148701471-7341862e-a078-4018-a19d-3aee4355415e.png)
+![Performance Plot](https://user-images.githubusercontent.com/96803412/148705423-b63169e0-a14e-4d7d-8d4f-0ee2e80c55b6.png)
 
 ### Interpretation of the results
 - NaiveBayesMultinomial is an algorithm best suited for text data, so it is understandable that it was in the top three contenders (with SVM and RandomForest) for best F-measure. 
