@@ -27,7 +27,7 @@ Multiple classifier combinations were evaluated on `train.arff`. The validation 
 #### Setup: 
 With *AttributeSelectedClassifier* wrapped up inside *FiteredClassifier*, we investigated various options for: 
 - ***StringToWordVector* filter** (e.g., outputWordCounts, lowerCaseTokens, wordsToKeep, Stemmer)
-- **Attribute selection techniques** (e.g., WrapperSubsetEval, CfsSubsetEval, and GainRatioAttributeEval).
+- **Attribute selection** (e.g., WrapperSubsetEval, CfsSubsetEval, and GainRatioAttributeEval).
 
 We can break up each tweet into tokens by using the *StringToWordVector* filter.
 
