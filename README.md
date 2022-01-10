@@ -42,13 +42,13 @@ This file (of English tweets) contained 75% training instances and 25% test inst
 - **Test Instances:** 3,000
 
 
-### Evaluating the "best" models on `train+test.arff`
+### Evaluating the best models on `train+test.arff`
 
 We used F-measure for the performance metric and Train/Test Percentage Split 75% (order preserved) for the validation technique. 
 
 For the evaluation, we gathered the F-measure value for each model, as well as the number of true positives, true negatives, false positives, and false negatives.
 
-We picked the "best" model for each classifier, and they are the following:
+We picked the best model for each classifier, and they are the following:
 
 **Model 1** - NaiveBayesMultinomial: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute Selection: CfsSubsetEval.
 
@@ -71,8 +71,11 @@ Comparison flags: &nbsp; v for **significantly better** performance and * for **
 
 ![Performance Plot](https://user-images.githubusercontent.com/96803412/148705423-b63169e0-a14e-4d7d-8d4f-0ee2e80c55b6.png)
 
-### Interpretation of the results
+### Interpreting the results
 - NaiveBayesMultinomial is an algorithm best suited for text data, so it is understandable that it was in the top three contenders (with SVM and RandomForest) for best F-measure. 
 - For both the train and test datasets, SVM and RandomForest performed **significantly better** than NaiveBayesMultinomial.
 - There were more **false positives** than **true positives** for the four models referenced in the plot, which indicates that the algorithms tended to classify tweets as hate speech when they were actually non-hate speech.
-- Our intuition gained from the results is that Random Forests (*an ensemble learning method*) is a powerful technique that **exhibits good predictive performance** on independent test data compared to our remaining models. 
+- Our intuition gained from the results is that Random Forests (*an ensemble learning method*) is a powerful technique that **exhibits good predictive performance** on independent test data compared to our remaining models. Model 5 is our top model.
+
+### Discussing the top model results
+
