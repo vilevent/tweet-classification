@@ -10,10 +10,10 @@ Identification of multilingual hate speech (English and Spanish) aimed at women 
 
 The problem at hand is considered to be a **binary classification problem** as each instance in the data contains one of two class labels: 
 - 1 (hate speech is present in tweet; HS) 
-- 0 (hate speech is not present in tweet; NonHS)
+- 0 (hate speech is *not* present in tweet; NonHS)
 
 
-### High-level solution
+### High-level solution (as a black box)
 An algorithm that evaluates keywords in tweets about immigrants and women to detect if the tweet is hateful or non-hateful. 
 
 The inputs to the algorithm are the tweets. The outputs of the algorithm are the binary labels indicating hate speech presence or absence in the tweets.
@@ -48,15 +48,15 @@ We used F-measure for the performance metric and **Train/Test Percentage Split 7
 
 We picked the best model for each of the classifiers, and they are the following:
 
-- **Model 1** - NaiveBayesMultinomial: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute Selection: CfsSubsetEval.
+- **Model 1** - *NaiveBayesMultinomial*: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute Selection: CfsSubsetEval.
 
-- **Model 2** - ZeroR: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute Selection: SymmetricUncertAttributeEval.
+- **Model 2** - *ZeroR*: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute Selection: SymmetricUncertAttributeEval.
 
-- **Model 3** - OneR: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute Selection: OneRAttributeEval.
+- **Model 3** - *OneR*: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute Selection: OneRAttributeEval.
 
-- **Model 4** - SVM: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute selection: InfoGainAttributeEval, Ranker method, numToSelect=15.
+- **Model 4** - *SVM*: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute selection: InfoGainAttributeEval, Ranker method, numToSelect=15.
 
-- **Model 5** - RandomForest: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute Selection: SymmetricUncertAttributeEval, Ranker method, numToSelect=10. 
+- **Model 5** - *RandomForest*: lowerCaseTokens=True, Stemmer as LovinsStemmer, default for remaining StringToWordVector options. Attribute Selection: SymmetricUncertAttributeEval, Ranker method, numToSelect=10. 
 
 For the evaluation, we gathered the F-measure value for each model, as well as the number of true positives (**TPs**), true negatives (**TNs**), false positives (**FPs**), and false negatives (**FNs**).
 
